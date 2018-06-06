@@ -66,7 +66,7 @@ gulp.task('serve', ['styles', 'scripts', 'templates'], () => {
         server: ['.tmp', 'dist']
     });
 
-    gulp.watch(['src/templates/**/*.html'], browserSync.reload);
+    gulp.watch(['src/templates/**/*.html'], ['templates', browserSync.reload]);
     gulp.watch(['src/sass/**/*.{scss,css}'], ['styles']);
     gulp.watch(['src/js/**/*.{js,es6}'], ['scripts', browserSync.reload]);
 
