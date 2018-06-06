@@ -40,7 +40,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 
     return browserify({
-        entries: 'src/js/app.js',
+        entries: 'src/js/index.js',
         debug: true
     })
         .transform("babelify", {presets: ["env"]})
@@ -55,7 +55,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('templates', () => {
-  return gulp.src('src/templates/**/*.html').pipe(gulp.dest("./public"))
+  return gulp.src('src/templates/**/*.html').pipe(gulp.dest("./dist"))
 });
 
 // Browser-Sync
